@@ -1,8 +1,11 @@
 import requests
 import json
 
-url = 'http://127.0.0.1:3000/'
-get = requests.get(url)
-print(get.status_code)
-print('?????')
-  
+data = {'key':'I want to search for blood pressure'}
+
+def request():
+    url = 'http://localhost:3000/botrespon'
+    get = requests.post(url, data=data)
+    print(get.text)
+if __name__ == '__main__':
+    request()

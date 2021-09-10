@@ -1,7 +1,8 @@
+
 import nltk
 nltk.download('punkt')
 nltk.download('wordnet')
-from nltk.stem import WordNetLemmatizer
+from nltk.stem import WordNetLemmatizeter
 lemmatizer = WordNetLemmatizer()
 import json
 import pickle
@@ -94,3 +95,5 @@ hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5,
 model.save('chatbot_model.h5', hist)
 
 print("model created")
+
+# %%
